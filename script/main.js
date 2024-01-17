@@ -1,16 +1,32 @@
-
-const calculater = (value) => {
-	memory.push(value)
-	console.log(memory)
+const clearCalculator = () => {
+	calculationString = '';
+	calculationWindow.value = '';
 }
 
-let memory = []
-let calculationString = "";
+const clearWindow = () => {
+	calculationWindow.value = '';
+}
+
+const getCalulation = () => {
+	 return eval(calculationString)
+}
+
+let calculationString = ''
 let calculationWindow = document.querySelector('#calculation-window')
 let calculatorButtons = document.querySelectorAll('button');
 
 [...calculatorButtons].forEach((element) => {
 	element.addEventListener('click', () => {
-		(isNaN(parseInt(element.dataset.value))) ? element.dataset.value : calculater(parseInt(element.dataset.value));
+		if (element.dataset.value == 'clear') {
+			clearCalculator();
+		} else {
+			if (element.dataset.value == '=') {
+				clearWindow();
+				calculationWindow.value = getCalulation()
+			} else {
+				calculationString += element.dataset.value;
+				calculationWindow.value = calculationString;
+			}
+		}
 	});
 });
