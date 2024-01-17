@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="./css/main.css">
+		<title>Calculator</title>
+	</head>
+	<body>
+
+		<!-- Header Section -->
+
+		<header id="header">
+			<div class="container">
+				<h1 id="logo">Calculator</h1>
+			</div>
+		</header>
+
+		
+		<!-- Main Section -->
+
+		<main id="main">
+			<div class="container">
+				<section id="calculator">
+					<div class="row">
+						<input id="calculation-window" value="" disabled>
+					</div>
+					<div class="row">
+						<button id="seven" data-value=7>7</button>
+						<button id="eight" data-value=8>8</button>
+						<button id="nine" data-value="9">9</button>
+						<button id="divide" data-value="/">%</button>
+					</div>
+					<div class="row">
+						<button id="four" data-value="4">4</button>
+						<button id="five" data-value="5">5</button>
+						<button id="six" data-value="6">6</button>
+						<button id="multiply" data-value="*">X</button>
+					</div>
+					<div class="row">
+						<button id="one" data-value="1">1</button>
+						<button id="two" data-value="2">2</button>
+						<button id="three" data-value="3">3</button>
+						<button id="subtract" data-value="-">-</button>
+					</div>
+					<div class="row">
+						<button id="zero" data-value="0">0</button>
+						<button id="point" data-value=".">.</button>
+						<button id="add" data-value="+">+</button>
+						<button id="equal" data-value="=">=</button>
+					</div>
+					<div class="row">
+						<button id="clear" data-value="clear">clear</button>
+					</div>
+				</section>
+			</div>
+		</main>
+
+
+		<!-- Footer Section -->
+
+		<footer id="footer">
+			<div class="container">
+				<p>Developer: Daniel Anderson</p>
+			</div>
+		</footer>
+
+		<script src="./script/main.js"></script>
+	</body>
+</html>
